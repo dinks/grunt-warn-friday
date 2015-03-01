@@ -4,6 +4,8 @@
 
 [![Build Status](https://travis-ci.org/dinks/grunt-warn-friday.svg)](https://travis-ci.org/dinks/grunt-warn-friday)
 
+[![Code Climate](https://codeclimate.com/github/dinks/grunt-warn-friday/badges/gpa.svg)](https://codeclimate.com/github/dinks/grunt-warn-friday)
+
 ![Success](success.gif)
 
 ![Failure](fail.gif)
