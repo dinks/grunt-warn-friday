@@ -4,6 +4,10 @@
 
 [![Build Status](https://travis-ci.org/dinks/grunt-warn-friday.svg)](https://travis-ci.org/dinks/grunt-warn-friday)
 
+![Success](success.gif)
+
+![Failure](fail.gif)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
