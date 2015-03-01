@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Grunt-warn-friday by dinks</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Grunt-warn-friday</h1>
+        <p>Grunt to warn developers of a Friday deployment</p>
+        <p class="view"><a href="https://github.com/dinks/grunt-warn-friday">View the Project on GitHub <small>dinks/grunt-warn-friday</small></a></p>
+        <ul>
+          <li><a href="https://github.com/dinks/grunt-warn-friday/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/dinks/grunt-warn-friday/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/dinks/grunt-warn-friday">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="grunt-warn-friday" class="anchor" href="#grunt-warn-friday" aria-hidden="true"><span class="octicon octicon-link"></span></a>grunt-warn-friday</h1>
+
+<blockquote>
+<p>Grunt to warn developers of a Friday deployment</p>
+</blockquote>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>This plugin requires Grunt <code>~0.4.5</code></p>
+
+<p>If you haven't used <a href="http://gruntjs.com/">Grunt</a> before, be sure to check out the <a href="http://gruntjs.com/getting-started">Getting Started</a> guide, as it explains how to create a <a href="http://gruntjs.com/sample-gruntfile">Gruntfile</a> as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:</p>
+
+<div class="highlight highlight-shell"><pre>npm install grunt-warn-friday --save-dev</pre></div>
+
+<p>Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:</p>
+
+<div class="highlight highlight-js"><pre>grunt.loadNpmTasks(<span class="pl-s1"><span class="pl-pds">'</span>grunt-warn-friday<span class="pl-pds">'</span></span>);</pre></div>
+
+<h2>
+<a id="the-warn_friday-task" class="anchor" href="#the-warn_friday-task" aria-hidden="true"><span class="octicon octicon-link"></span></a>The "warn_friday" task</h2>
+
+<h3>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h3>
+
+<p>In your project's Gruntfile, add a section named <code>warn_friday</code> to the data object passed into <code>grunt.initConfig()</code>.</p>
+
+<div class="highlight highlight-js"><pre>grunt.initConfig({
+  warn_friday<span class="pl-k">:</span> {
+    options<span class="pl-k">:</span> {
+      <span class="pl-c">// Task-specific options go here.</span>
+    },
+    your_target<span class="pl-k">:</span> {
+      <span class="pl-c">// Target-specific file lists and/or options go here.</span>
+    },
+  },
+});</pre></div>
+
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<h4>
+<a id="optionsfriday" class="anchor" href="#optionsfriday" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.friday</h4>
+
+<p>Type: <code>Number</code></p>
+
+<p>Default value: 5</p>
+
+<p>The value considered to be a Friday. Something between 0 and 6. See <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">MDN</a>.</p>
+
+<h4>
+<a id="optionsaggressive" class="anchor" href="#optionsaggressive" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.aggressive</h4>
+
+<p>Type: <code>Boolean</code></p>
+
+<p>Default value: <code>true</code></p>
+
+<p>Causes the task to fail if the deployment falls on a given <code>options.friday</code>.</p>
+
+<h4>
+<a id="optionswarningtemplate" class="anchor" href="#optionswarningtemplate" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.warningTemplate</h4>
+
+<p>Type: <code>String</code></p>
+
+<p>Default value: <code>'templates/deploy_friday.txt'</code></p>
+
+<p>A String value which points to the template to show when the deployments <strong>falls</strong> on a given <code>options.friday</code>.</p>
+
+<h4>
+<a id="optionswarningcolor" class="anchor" href="#optionswarningcolor" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.warningColor</h4>
+
+<p>Type: <code>String</code></p>
+
+<p>Default value: <code>red</code></p>
+
+<p>Color of the warning message.</p>
+
+<h4>
+<a id="optionsoktemplate" class="anchor" href="#optionsoktemplate" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.okTemplate</h4>
+
+<p>Type: <code>String</code></p>
+
+<p>Default value: <code>'templates/all_ok.txt'</code></p>
+
+<p>A String value which points to the template to show when the deployments <strong>does not fall</strong> on a given <code>options.friday</code>.</p>
+
+<h4>
+<a id="optionsokcolor" class="anchor" href="#optionsokcolor" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.okColor</h4>
+
+<p>Type: <code>String</code></p>
+
+<p>Default value: <code>green</code></p>
+
+<p>Color of the 'all ok' message.</p>
+
+<h3>
+<a id="usage-examples" class="anchor" href="#usage-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage Examples</h3>
+
+<h4>
+<a id="default-options" class="anchor" href="#default-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Default Options</h4>
+
+<p>Use with the options defined above!</p>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using <a href="http://gruntjs.com/">Grunt</a>.</p>
+
+<h2>
+<a id="release-history" class="anchor" href="#release-history" aria-hidden="true"><span class="octicon octicon-link"></span></a>Release History</h2>
+
+<p><em>(Nothing yet)</em></p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/dinks">dinks</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-44156589-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
