@@ -2,6 +2,8 @@
 
 > Grunt to warn developers of a Friday deployment
 
+[![Build Status](https://travis-ci.org/dinks/grunt-warn-friday.svg)](https://travis-ci.org/dinks/grunt-warn-friday)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
