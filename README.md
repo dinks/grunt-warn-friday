@@ -91,4 +91,5 @@ Use with the options defined above!
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
-_(Nothing yet)_
+
+*01/03/2015* Version **[0.1.0](https://github.com/dinks/grunt-warn-friday/releases/tag/v0.1.0)**
