@@ -99,3 +99,4 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 ## Release History
 
 *01/03/2015* Version **[0.1.0](https://github.com/dinks/grunt-warn-friday/releases/tag/v0.1.0)**
+*10/05/2022* Version **[0.1.1](https://github.com/dinks/grunt-warn-friday/releases/tag/v0.1.1)**
