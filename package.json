@@ -34,6 +34,9 @@
     "grunt": ">=1.5.2",
     "minimist": ">=1.2.6"
   },
+  "dependencies": {
+    "minimist": ">=1.2.6"
+  },
   "peerDependencies": {
     "grunt": ">=1.5.2"
   },
